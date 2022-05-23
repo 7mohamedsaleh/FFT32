@@ -1,0 +1,902 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: fft32.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fft32.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fft32"
+Output Format                      : NGC
+Target Device                      : xc7z010-3-clg400
+
+---- Source Options
+Top Module Name                    : fft32
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\multiply_acc.v" into library work
+Parsing module <multiply_acc>.
+Analyzing Verilog file "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\mux_mac_regs.v" into library work
+Parsing module <mux_mac_regs>.
+Analyzing Verilog file "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\controller.v" into library work
+Parsing module <controller>.
+Analyzing Verilog file "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\fft32.v" into library work
+Parsing module <fft32>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fft32>.
+
+Elaborating module <controller>.
+
+Elaborating module <mux_mac_regs>.
+
+Elaborating module <multiply_acc>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fft32>.
+    Related source file is "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\fft32.v".
+WARNING:Xst:647 - Input <Xn_14> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <fft32> synthesized.
+
+Synthesizing Unit <controller>.
+    Related source file is "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\controller.v".
+        w_0_2_real = 24'b000000000000010000000000
+        w_0_2_imag = 24'b000000000000000000000000
+        w_0_4_real = 24'b000000000000010000000000
+        w_0_4_imag = 24'b000000000000000000000000
+        w_1_4_real = 24'b000000000000000000000000
+        w_1_4_imag = 24'b100000000000010000000000
+        w_0_8_real = 24'b000000000000010000000000
+        w_0_8_imag = 24'b000000000000000000000000
+        w_1_8_real = 24'b000000000000001011010100
+        w_1_8_imag = 24'b100000000000001011010100
+        w_2_8_real = 24'b000000000000000000000000
+        w_2_8_imag = 24'b100000000000010000000000
+        w_3_8_real = 24'b100000000000001011010100
+        w_3_8_imag = 24'b100000000000001011010100
+        w_0_16_real = 24'b000000000000010000000000
+        w_0_16_imag = 24'b000000000000000000000000
+        w_1_16_real = 24'b000000000000001110110010
+        w_1_16_imag = 24'b100000000000000110000111
+        w_2_16_real = 24'b000000000000001011010100
+        w_2_16_imag = 24'b100000000000001011010100
+        w_3_16_real = 24'b000000000000000110000111
+        w_3_16_imag = 24'b100000000000001110110010
+        w_4_16_real = 24'b000000000000000000000000
+        w_4_16_imag = 24'b100000000000010000000000
+        w_5_16_real = 24'b100000000000000110000111
+        w_5_16_imag = 24'b100000000000001110110010
+        w_6_16_real = 24'b100000000000001011010100
+        w_6_16_imag = 24'b100000000000001011010100
+        w_7_16_real = 24'b100000000000001110110010
+        w_7_16_imag = 24'b100000000000000110000111
+        w_0_32_real = 24'b000000000000010000000000
+        w_0_32_imag = 24'b000000000000000000000000
+        w_1_32_real = 24'b000000000000001111101100
+        w_1_32_imag = 24'b100000000000000011000111
+        w_2_32_real = 24'b000000000000001110110010
+        w_2_32_imag = 24'b100000000000000110000111
+        w_3_32_real = 24'b000000000000001101010011
+        w_3_32_imag = 24'b100000000000001000111000
+        w_4_32_real = 24'b000000000000001011010100
+        w_4_32_imag = 24'b100000000000001011010100
+        w_5_32_real = 24'b000000000000001000111000
+        w_5_32_imag = 24'b100000000000001101010011
+        w_6_32_real = 24'b000000000000000110000111
+        w_6_32_imag = 24'b100000000000001110110010
+        w_7_32_real = 24'b000000000000000011000111
+        w_7_32_imag = 24'b100000000000001111101100
+        w_8_32_real = 24'b000000000000000000000000
+        w_8_32_imag = 24'b100000000000010000000000
+        w_9_32_real = 24'b100000000000000011000111
+        w_9_32_imag = 24'b100000000000001111101100
+        w_10_32_real = 24'b100000000000000110000111
+        w_10_32_imag = 24'b100000000000001110110010
+        w_11_32_real = 24'b100000000000001000111000
+        w_11_32_imag = 24'b100000000000001101010011
+        w_12_32_real = 24'b100000000000001011010100
+        w_12_32_imag = 24'b100000000000001011010100
+        w_13_32_real = 24'b100000000000001101010011
+        w_13_32_imag = 24'b100000000000001000111000
+        w_14_32_real = 24'b100000000000001110110010
+        w_14_32_imag = 24'b100000000000000110000111
+        w_15_32_real = 24'b100000000000001111101100
+        w_15_32_imag = 24'b100000000000000011000111
+    Found 3-bit register for signal <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 217                                            |
+    | Clock              | clk_2 (rising_edge)                            |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <controller> synthesized.
+
+Synthesizing Unit <mux_mac_regs>.
+    Related source file is "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\mux_mac_regs.v".
+INFO:Xst:3210 - "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\mux_mac_regs.v" line 70: Output port <ovf> of the instance <mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\mux_mac_regs.v" line 70: Output port <inexact> of the instance <mac_inst> is unconnected or connected to loadless signal.
+    Found 48-bit 7-to-1 multiplexer for signal <sample_1> created at line 36.
+    Found 48-bit 7-to-1 multiplexer for signal <sample_2> created at line 36.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <mux_mac_regs> synthesized.
+
+Synthesizing Unit <multiply_acc>.
+    Related source file is "F:\S T U D Y\EECE\4th\2nd\vlsi2\fft_proj\fftproject\multiply_acc.v".
+    Found 24-bit register for signal <output_imaj_add>.
+    Found 24-bit register for signal <output_real_sub>.
+    Found 24-bit register for signal <output_imaj_sub>.
+    Found 1-bit register for signal <ovf>.
+    Found 1-bit register for signal <inexact>.
+    Found 48-bit register for signal <output_add_20MHZ>.
+    Found 48-bit register for signal <output_sub_20MHZ>.
+    Found 24-bit register for signal <output_real_add>.
+    Found 25-bit subtractor for signal <real_output_comp_add> created at line 83.
+    Found 25-bit subtractor for signal <n0199> created at line 89.
+    Found 25-bit subtractor for signal <GND_4_o_GND_4_o_sub_44_OUT> created at line 92.
+    Found 25-bit subtractor for signal <imaj_output_comp_sub> created at line 92.
+    Found 24-bit adder for signal <sample2_real[22]_GND_4_o_add_8_OUT> created at line 59.
+    Found 24-bit adder for signal <sample2_imaj[22]_GND_4_o_add_12_OUT> created at line 63.
+    Found 24-bit adder for signal <sample2_imaj[22]_GND_4_o_add_16_OUT> created at line 67.
+    Found 24-bit adder for signal <sample2_real[22]_GND_4_o_add_20_OUT> created at line 71.
+    Found 24-bit adder for signal <GND_4_o_GND_4_o_add_23_OUT> created at line 76.
+    Found 24-bit adder for signal <GND_4_o_GND_4_o_add_26_OUT> created at line 77.
+    Found 25-bit adder for signal <n0154> created at line 83.
+    Found 25-bit adder for signal <BUS_0007_GND_4_o_add_31_OUT> created at line 84.
+    Found 25-bit adder for signal <n0194> created at line 86.
+    Found 25-bit adder for signal <imaj_output_comp_add> created at line 86.
+    Found 25-bit adder for signal <BUS_0009_GND_4_o_add_36_OUT> created at line 87.
+    Found 25-bit adder for signal <real_output_comp_sub> created at line 89.
+    Found 25-bit adder for signal <GND_4_o_GND_4_o_add_41_OUT> created at line 90.
+    Found 25-bit adder for signal <GND_4_o_GND_4_o_add_46_OUT> created at line 93.
+    Found 23x23-bit multiplier for signal <real1<45:0>> created at line 57.
+    Found 23x23-bit multiplier for signal <real2<45:0>> created at line 61.
+    Found 23x23-bit multiplier for signal <imaj1> created at line 65.
+    Found 23x23-bit multiplier for signal <imaj2> created at line 69.
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred 194 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <multiply_acc> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 64
+ 23x23-bit multiplier                                  : 64
+# Adders/Subtractors                                   : 288
+ 24-bit adder                                          : 96
+ 25-bit adder                                          : 96
+ 25-bit addsub                                         : 32
+ 25-bit subtractor                                     : 64
+# Registers                                            : 96
+ 1-bit register                                        : 32
+ 48-bit register                                       : 64
+# Multiplexers                                         : 256
+ 24-bit 2-to-1 multiplexer                             : 96
+ 25-bit 2-to-1 multiplexer                             : 128
+ 48-bit 7-to-1 multiplexer                             : 32
+# FSMs                                                 : 1
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 64
+ 23x23-bit multiplier                                  : 64
+# Adders/Subtractors                                   : 288
+ 23-bit adder                                          : 32
+ 24-bit adder                                          : 96
+ 25-bit adder                                          : 64
+ 25-bit addsub                                         : 32
+ 25-bit subtractor                                     : 64
+# Registers                                            : 3104
+ Flip-Flops                                            : 3104
+# Multiplexers                                         : 256
+ 24-bit 2-to-1 multiplexer                             : 96
+ 25-bit 2-to-1 multiplexer                             : 128
+ 48-bit 7-to-1 multiplexer                             : 32
+# FSMs                                                 : 1
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:6]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000001
+ 001   | 000010
+ 010   | 000100
+ 011   | 001000
+ 100   | 010000
+ 101   | 100000
+-------------------
+
+Optimizing unit <fft32> ...
+
+Optimizing unit <multiply_acc> ...
+WARNING:Xst:2677 - Node <inst_1/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_1/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_2/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_2/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_3/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_3/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_4/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_4/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_5/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_5/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_6/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_6/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_7/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_7/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_8/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_8/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_9/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_9/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_10/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_10/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_11/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_11/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_12/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_12/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_13/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_13/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_14/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_14/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_15/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_15/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_16/mac_inst/inexact> of sequential type is unconnected in block <fft32>.
+WARNING:Xst:2677 - Node <inst_16/mac_inst/ovf> of sequential type is unconnected in block <fft32>.
+INFO:Xst:2261 - The FF/Latch <inst_12/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_12/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_5/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_5/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_4/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_4/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_2/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_2/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_16/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_16/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_6/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_6/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_8/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_8/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_12/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_12/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_2/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_2/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_15/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_15/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_11/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_11/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_5/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_5/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_12/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_12/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_11/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_11/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_6/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_6/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_16/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_16/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_13/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_13/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_3/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_3/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_8/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_8/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_13/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_13/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_5/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_5/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_14/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_14/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_4/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_4/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_7/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_7/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_10/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_10/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_4/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_4/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_9/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_9/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_1/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_1/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_7/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_7/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_13/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_13/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_16/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_16/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_14/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_14/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_14/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_14/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_8/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_8/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_11/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_11/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_6/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_6/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_15/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_15/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_9/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_9/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_9/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_9/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_2/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_2/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_15/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_15/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_12/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_12/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_6/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_6/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_1/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_1/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_3/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_3/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_3/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_3/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_1/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_1/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_15/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_15/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_16/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_16/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_7/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_7/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_10/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_10/mac_inst/output_sub_20MHZ_24> 
+INFO:Xst:2261 - The FF/Latch <inst_10/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_10/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_10/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_10/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_4/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_4/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_14/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_14/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_2/mac_inst/output_add_20MHZ_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_2/mac_inst/output_sub_20MHZ_0> 
+INFO:Xst:2261 - The FF/Latch <inst_8/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_8/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_1/mac_inst/output_real_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_1/mac_inst/output_real_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_11/mac_inst/output_imaj_sub_0> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_11/mac_inst/output_imaj_add_0> 
+INFO:Xst:2261 - The FF/Latch <inst_3/mac_inst/output_add_20MHZ_24> in Unit <fft32> is equivalent to the following FF/Latch, which will be removed : <inst_3/mac_inst/output_sub_20MHZ_24> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fft32, actual ratio is 178.
+Optimizing block <fft32> to meet ratio 100 (+ 5) of 4400 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <fft32>, final ratio is 185.
+FlipFlop controller_inst/current_state_FSM_FFd1 has been replicated 14 time(s)
+FlipFlop controller_inst/current_state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop controller_inst/current_state_FSM_FFd3 has been replicated 12 time(s)
+FlipFlop controller_inst/current_state_FSM_FFd4 has been replicated 18 time(s)
+FlipFlop controller_inst/current_state_FSM_FFd5 has been replicated 4 time(s)
+FlipFlop controller_inst/current_state_FSM_FFd6 has been replicated 5 time(s)
+FlipFlop inst_1/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_1/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_2/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_2/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_3/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_3/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_4/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_4/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_5/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_5/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_6/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_6/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_7/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_7/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_8/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_8/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_9/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_9/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_10/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_10/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_11/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_11/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_12/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_12/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_13/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_13/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_14/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_14/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_15/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_15/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_16/mac_inst/output_add_20MHZ_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop inst_16/mac_inst/output_add_20MHZ_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3104
+ Flip-Flops                                            : 3104
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fft32.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 56039
+#      GND                         : 1
+#      INV                         : 1490
+#      LUT1                        : 2068
+#      LUT2                        : 4014
+#      LUT3                        : 1791
+#      LUT4                        : 5100
+#      LUT5                        : 3654
+#      LUT6                        : 6352
+#      MUXCY                       : 15362
+#      MUXF7                       : 3
+#      VCC                         : 1
+#      XORCY                       : 16203
+# FlipFlops/Latches                : 3104
+#      FD                          : 1577
+#      FDC                         : 54
+#      FDP                         : 6
+#      FDR                         : 1467
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 2282
+#      IBUF                        : 746
+#      OBUF                        : 1536
+# DSPs                             : 64
+#      DSP48E1                     : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z010clg400-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1568  out of  35200     4%  
+ Number of Slice LUTs:                24469  out of  17600   139% (*) 
+    Number used as Logic:             24469  out of  17600   139% (*) 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:  24507
+   Number with an unused Flip Flop:   22939  out of  24507    93%  
+   Number with an unused LUT:            38  out of  24507     0%  
+   Number of fully used LUT-FF pairs:  1530  out of  24507     6%  
+   Number of unique control sets:        27
+
+IO Utilization: 
+ Number of IOs:                        2308
+ Number of bonded IOBs:                2284  out of    100   2284% (*) 
+    IOB Flip Flops/Latches:            1536
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of DSP48E1s:                     64  out of     80    80%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1568  |
+clk_20                             | BUFGP                  | 1536  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.489ns (Maximum Frequency: 105.389MHz)
+   Minimum input arrival time before clock: 8.823ns
+   Maximum output required time after clock: 0.511ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.489ns (frequency: 105.389MHz)
+  Total number of paths / destination ports: 173669883494718 / 1591
+-------------------------------------------------------------------------
+Delay:               9.489ns (Levels of Logic = 50)
+  Source:            controller_inst/current_state_FSM_FFd4_1 (FF)
+  Destination:       inst_10/mac_inst/output_imaj_sub_22 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: controller_inst/current_state_FSM_FFd4_1 to inst_10/mac_inst/output_imaj_sub_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.232   0.366  controller_inst/current_state_FSM_FFd4_1 (controller_inst/current_state_FSM_FFd4_1)
+     LUT2:I0->O          253   0.043   0.430  inst_10/Mmux_sample_2<24>11 (inst_10/Mmux_sample_2<24>1)
+     LUT6:I5->O           21   0.043   0.370  inst_10/Mmux_sample_2<17>1 (inst_10/sample_2<17>)
+     DSP48E1:A17->PCOUT47    1   2.970   0.000  inst_10/mac_inst/Mmult_imaj1 (inst_10/mac_inst/Mmult_imaj1_PCOUT_to_Mmult_imaj11_PCIN_47)
+     DSP48E1:PCIN47->P0    3   1.107   0.289  inst_10/mac_inst/Mmult_imaj11 (inst_10/mac_inst/imaj1<17>)
+     INV:I->O              1   0.053   0.000  inst_10/mac_inst/n0178<7>1_INV_0 (inst_10/mac_inst/n0178<7>)
+     MUXCY:S->O            1   0.230   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<7> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<7>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<8> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<8>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<9> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<9>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<10> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<10>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<11> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<11>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<12> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<12>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<13> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<13>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<14> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<14>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<15> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<15>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<16> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<16>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<17> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<17>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<18> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<18>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<19> (inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_cy<19>)
+     XORCY:CI->O           2   0.251   0.293  inst_10/mac_inst/Madd_sample2_imaj[22]_GND_4_o_add_16_OUT_xor<20> (inst_10/mac_inst/sample2_imaj[22]_GND_4_o_add_16_OUT<20>)
+     LUT5:I4->O            1   0.043   0.000  inst_10/mac_inst/Msub_GND_4_o_GND_4_o_sub_44_OUT_lut<20> (inst_10/mac_inst/Msub_GND_4_o_GND_4_o_sub_44_OUT_lut<20>)
+     MUXCY:S->O            1   0.230   0.000  inst_10/mac_inst/Msub_GND_4_o_GND_4_o_sub_44_OUT_cy<20> (inst_10/mac_inst/Msub_GND_4_o_GND_4_o_sub_44_OUT_cy<20>)
+     XORCY:CI->O           3   0.251   0.299  inst_10/mac_inst/Msub_GND_4_o_GND_4_o_sub_44_OUT_xor<21> (inst_10/mac_inst/GND_4_o_GND_4_o_sub_44_OUT<21>)
+     LUT4:I3->O            1   0.043   0.000  inst_10/mac_inst/Msub_imaj_output_comp_sub_lut<21> (inst_10/mac_inst/Msub_imaj_output_comp_sub_lut<21>)
+     MUXCY:S->O            1   0.230   0.000  inst_10/mac_inst/Msub_imaj_output_comp_sub_cy<21> (inst_10/mac_inst/Msub_imaj_output_comp_sub_cy<21>)
+     MUXCY:CI->O           1   0.013   0.000  inst_10/mac_inst/Msub_imaj_output_comp_sub_cy<22> (inst_10/mac_inst/Msub_imaj_output_comp_sub_cy<22>)
+     XORCY:CI->O          48   0.251   0.453  inst_10/mac_inst/Msub_imaj_output_comp_sub_xor<23> (inst_10/mac_inst/imaj_output_comp_sub<23>)
+     LUT2:I0->O            1   0.043   0.279  inst_10/mac_inst/GND_4_o_GND_4_o_AND_533_o_inv2 (inst_10/mac_inst/GND_4_o_GND_4_o_AND_533_o_inv)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<0> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<0>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<1> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<1>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<2> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<2>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<3> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<4> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<5> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<6> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<7> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<8> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<8>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<9> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<9>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<10> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<10>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<11> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<11>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<12> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<13> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<13>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<14> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<14>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<15> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<15>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<16> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<16>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<17> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<17>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<18> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<18>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<19> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<19>)
+     MUXCY:CI->O           1   0.012   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<20> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<20>)
+     MUXCY:CI->O           0   0.013   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<21> (inst_10/mac_inst/Mmux_imaj_output_sub_rs_cy<21>)
+     XORCY:CI->O           2   0.251   0.000  inst_10/mac_inst/Mmux_imaj_output_sub_rs_xor<22> (inst_10/mac_inst/imaj_output_sub<22>)
+     FDR:D                    -0.001          inst_10/mac_inst/output_imaj_sub_22
+    ----------------------------------------
+    Total                      9.489ns (6.708ns logic, 2.780ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16000913870787 / 3046
+-------------------------------------------------------------------------
+Offset:              8.823ns (Levels of Logic = 67)
+  Source:            Xn_29<1> (PAD)
+  Destination:       inst_12/mac_inst/output_real_add_22 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Xn_29<1> to inst_12/mac_inst/output_real_add_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.000   0.564  Xn_29_1_IBUF (Xn_29_1_IBUF)
+     LUT6:I0->O           15   0.043   0.408  inst_12/Mmux_sample_2<25>1 (inst_12/sample_2<25>)
+     LUT4:I2->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_lut<3> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_lut<3>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<3> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<4> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<5> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<6> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<7> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<8> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<8>)
+     MUXCY:CI->O           0   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<9> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<9>)
+     XORCY:CI->O           1   0.251   0.343  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_xor<10> (inst_12/mac_inst/Mmult_real1<45:0>_Madd_158)
+     LUT2:I0->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_lut<12> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_lut<12>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<12> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<13> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<13>)
+     MUXCY:CI->O           0   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<14> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<14>)
+     XORCY:CI->O           1   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_xor<15> (inst_12/mac_inst/Mmult_real1<45:0>_Madd_1814)
+     LUT2:I1->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_lut<15> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_lut<15>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<15> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<15>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<16> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<16>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<17> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<17>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<18> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<18>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<19> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<19>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<20> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<20>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<21> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<21>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<22> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<22>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<23> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<23>)
+     XORCY:CI->O           1   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_xor<24> (inst_12/mac_inst/Mmult_real1<45:0>_Madd_2718)
+     LUT2:I1->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd20_lut<24> (inst_12/mac_inst/Mmult_real1<45:0>_Madd20_lut<24>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd20_cy<24> (inst_12/mac_inst/Mmult_real1<45:0>_Madd20_cy<24>)
+     XORCY:CI->O           1   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd20_xor<25> (inst_12/mac_inst/Mmult_real1<45:0>_Madd21_lut<28>)
+     LUT1:I0->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28>_rt (inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28>_rt)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28> (inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28>)
+     XORCY:CI->O           3   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd21_xor<29> (inst_12/mac_inst/real1<29>)
+     INV:I->O              1   0.053   0.000  inst_12/mac_inst/n0174<19>1_INV_0 (inst_12/mac_inst/n0174<19>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Madd_sample2_real[22]_GND_4_o_add_8_OUT_cy<19> (inst_12/mac_inst/Madd_sample2_real[22]_GND_4_o_add_8_OUT_cy<19>)
+     XORCY:CI->O           2   0.251   0.293  inst_12/mac_inst/Madd_sample2_real[22]_GND_4_o_add_8_OUT_xor<20> (inst_12/mac_inst/sample2_real[22]_GND_4_o_add_8_OUT<20>)
+     LUT6:I5->O            1   0.043   0.000  inst_12/mac_inst/Madd_n0154_lut<20> (inst_12/mac_inst/Madd_n0154_lut<20>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Madd_n0154_cy<20> (inst_12/mac_inst/Madd_n0154_cy<20>)
+     XORCY:CI->O           3   0.251   0.299  inst_12/mac_inst/Madd_n0154_xor<21> (inst_12/mac_inst/n0154<21>)
+     LUT4:I3->O            1   0.043   0.000  inst_12/mac_inst/Msub_real_output_comp_add_lut<21> (inst_12/mac_inst/Msub_real_output_comp_add_lut<21>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Msub_real_output_comp_add_cy<21> (inst_12/mac_inst/Msub_real_output_comp_add_cy<21>)
+     MUXCY:CI->O           0   0.013   0.000  inst_12/mac_inst/Msub_real_output_comp_add_cy<22> (inst_12/mac_inst/Msub_real_output_comp_add_cy<22>)
+     XORCY:CI->O          48   0.251   0.453  inst_12/mac_inst/Msub_real_output_comp_add_xor<23> (inst_12/mac_inst/real_output_comp_add<23>)
+     LUT2:I0->O            1   0.043   0.279  inst_12/mac_inst/real_output_comp_add[23]_real_output_comp_add[22]_AND_538_o_inv2 (inst_12/mac_inst/real_output_comp_add[23]_real_output_comp_add[22]_AND_538_o_inv)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<0> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<0>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<1> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<1>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<2> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<2>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<3> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<4> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<5> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<6> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<7> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<8> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<8>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<9> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<9>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<10> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<10>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<11> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<11>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<12> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<13> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<13>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<14> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<14>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<15> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<15>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<16> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<16>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<17> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<17>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<18> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<18>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<19> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<19>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<20> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<20>)
+     MUXCY:CI->O           0   0.013   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<21> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<21>)
+     XORCY:CI->O           2   0.251   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_xor<22> (inst_12/mac_inst/real_output_add<22>)
+     FDR:D                    -0.001          inst_12/mac_inst/output_real_add_22
+    ----------------------------------------
+    Total                      8.823ns (5.026ns logic, 3.797ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_20'
+  Total number of paths / destination ports: 16039709647852 / 1536
+-------------------------------------------------------------------------
+Offset:              8.823ns (Levels of Logic = 67)
+  Source:            Xn_29<1> (PAD)
+  Destination:       inst_12/mac_inst/output_add_20MHZ_46 (FF)
+  Destination Clock: clk_20 rising
+
+  Data Path: Xn_29<1> to inst_12/mac_inst/output_add_20MHZ_46
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.000   0.564  Xn_29_1_IBUF (Xn_29_1_IBUF)
+     LUT6:I0->O           15   0.043   0.408  inst_12/Mmux_sample_2<25>1 (inst_12/sample_2<25>)
+     LUT4:I2->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_lut<3> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_lut<3>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<3> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<4> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<5> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<6> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<7> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<8> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<8>)
+     MUXCY:CI->O           0   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<9> (inst_12/mac_inst/Mmult_real1<45:0>_Madd8_cy<9>)
+     XORCY:CI->O           1   0.251   0.343  inst_12/mac_inst/Mmult_real1<45:0>_Madd8_xor<10> (inst_12/mac_inst/Mmult_real1<45:0>_Madd_158)
+     LUT2:I0->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_lut<12> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_lut<12>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<12> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<13> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<13>)
+     MUXCY:CI->O           0   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<14> (inst_12/mac_inst/Mmult_real1<45:0>_Madd14_cy<14>)
+     XORCY:CI->O           1   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd14_xor<15> (inst_12/mac_inst/Mmult_real1<45:0>_Madd_1814)
+     LUT2:I1->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_lut<15> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_lut<15>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<15> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<15>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<16> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<16>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<17> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<17>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<18> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<18>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<19> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<19>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<20> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<20>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<21> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<21>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<22> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<22>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<23> (inst_12/mac_inst/Mmult_real1<45:0>_Madd18_cy<23>)
+     XORCY:CI->O           1   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd18_xor<24> (inst_12/mac_inst/Mmult_real1<45:0>_Madd_2718)
+     LUT2:I1->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd20_lut<24> (inst_12/mac_inst/Mmult_real1<45:0>_Madd20_lut<24>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd20_cy<24> (inst_12/mac_inst/Mmult_real1<45:0>_Madd20_cy<24>)
+     XORCY:CI->O           1   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd20_xor<25> (inst_12/mac_inst/Mmult_real1<45:0>_Madd21_lut<28>)
+     LUT1:I0->O            1   0.043   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28>_rt (inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28>_rt)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28> (inst_12/mac_inst/Mmult_real1<45:0>_Madd21_cy<28>)
+     XORCY:CI->O           3   0.251   0.289  inst_12/mac_inst/Mmult_real1<45:0>_Madd21_xor<29> (inst_12/mac_inst/real1<29>)
+     INV:I->O              1   0.053   0.000  inst_12/mac_inst/n0174<19>1_INV_0 (inst_12/mac_inst/n0174<19>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Madd_sample2_real[22]_GND_4_o_add_8_OUT_cy<19> (inst_12/mac_inst/Madd_sample2_real[22]_GND_4_o_add_8_OUT_cy<19>)
+     XORCY:CI->O           2   0.251   0.293  inst_12/mac_inst/Madd_sample2_real[22]_GND_4_o_add_8_OUT_xor<20> (inst_12/mac_inst/sample2_real[22]_GND_4_o_add_8_OUT<20>)
+     LUT6:I5->O            1   0.043   0.000  inst_12/mac_inst/Madd_n0154_lut<20> (inst_12/mac_inst/Madd_n0154_lut<20>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Madd_n0154_cy<20> (inst_12/mac_inst/Madd_n0154_cy<20>)
+     XORCY:CI->O           3   0.251   0.299  inst_12/mac_inst/Madd_n0154_xor<21> (inst_12/mac_inst/n0154<21>)
+     LUT4:I3->O            1   0.043   0.000  inst_12/mac_inst/Msub_real_output_comp_add_lut<21> (inst_12/mac_inst/Msub_real_output_comp_add_lut<21>)
+     MUXCY:S->O            1   0.230   0.000  inst_12/mac_inst/Msub_real_output_comp_add_cy<21> (inst_12/mac_inst/Msub_real_output_comp_add_cy<21>)
+     MUXCY:CI->O           0   0.013   0.000  inst_12/mac_inst/Msub_real_output_comp_add_cy<22> (inst_12/mac_inst/Msub_real_output_comp_add_cy<22>)
+     XORCY:CI->O          48   0.251   0.453  inst_12/mac_inst/Msub_real_output_comp_add_xor<23> (inst_12/mac_inst/real_output_comp_add<23>)
+     LUT2:I0->O            1   0.043   0.279  inst_12/mac_inst/real_output_comp_add[23]_real_output_comp_add[22]_AND_538_o_inv2 (inst_12/mac_inst/real_output_comp_add[23]_real_output_comp_add[22]_AND_538_o_inv)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<0> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<0>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<1> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<1>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<2> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<2>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<3> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<4> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<5> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<6> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<7> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<8> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<8>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<9> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<9>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<10> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<10>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<11> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<11>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<12> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<13> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<13>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<14> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<14>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<15> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<15>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<16> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<16>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<17> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<17>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<18> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<18>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<19> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<19>)
+     MUXCY:CI->O           1   0.012   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<20> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<20>)
+     MUXCY:CI->O           0   0.013   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_cy<21> (inst_12/mac_inst/Mmux_real_output_add_rs_cy<21>)
+     XORCY:CI->O           2   0.251   0.000  inst_12/mac_inst/Mmux_real_output_add_rs_xor<22> (inst_12/mac_inst/real_output_add<22>)
+     FD:D                     -0.001          inst_12/mac_inst/output_add_20MHZ_46
+    ----------------------------------------
+    Total                      8.823ns (5.026ns logic, 3.797ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_20'
+  Total number of paths / destination ports: 1536 / 1536
+-------------------------------------------------------------------------
+Offset:              0.511ns (Levels of Logic = 1)
+  Source:            inst_1/mac_inst/output_add_20MHZ_47 (FF)
+  Destination:       Xw_out_0<47> (PAD)
+  Source Clock:      clk_20 rising
+
+  Data Path: inst_1/mac_inst/output_add_20MHZ_47 to Xw_out_0<47>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.232   0.279  inst_1/mac_inst/output_add_20MHZ_47 (inst_1/mac_inst/output_add_20MHZ_47)
+     OBUF:I->O                 0.000          Xw_out_0_47_OBUF (Xw_out_0<47>)
+    ----------------------------------------
+    Total                      0.511ns (0.232ns logic, 0.279ns route)
+                                       (45.4% logic, 54.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.489|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_20
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.489|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 121.00 secs
+Total CPU time to Xst completion: 121.54 secs
+ 
+--> 
+
+Total memory usage is 4928200 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :   63 (   0 filtered)
+
